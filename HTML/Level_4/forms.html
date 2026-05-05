@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>My First Form</h1>
+    <!-- action attribute | specifies the url to which the form data should be sent when submitted , if not specified form will be submitted to the current page url  -->
+    <form action="#">
+        
+        <!-- label tag | Connect the label with specific form -->
+        <label for="username">Username :</label>
+        <!-- Input tag | text-->
+        <input type="text" placeholder="Enter your username" id="username" name="username" value="John Dow" required><br><br>
+        <!-- Input tag | password -->
+        <label for="password">Password :</label>
+        <input type="password" placeholder="Enter your password" value="John Doe" required> <br><br>
+
+
+        <!-- name property | id for data : identifies form element when submitting | should be unique  -->
+        <!-- value property | set initial value for input element | this is data sent when form is submitted -->
+
+        <!-- Input type | Date -->
+        <label for="date">Date :</label>
+        <input type="date" name="date" id="date"> <br> <br>
+
+        <!-- Input type | File -->
+        <label for="file">File :</label>
+        <input type="file" name="file" id="file" ><br><br>
+
+        <!-- Input type | Color -->
+        <label for="color">Color :</label>
+        <input type="color" id="color"> <br> <br>
+
+        <!-- Input type | range -->
+        <label for="range">Range :</label>
+        <input type="range" id="range"><br><br>
+
+        <!-- Input type | button -->
+        <label for="btn">Button :</label>
+        <input type="button" value="Click Me" id="btn"> <br> <br>
+
+        <!--Input type | radio -->
+        Gender : 
+        <label for="male">Male</label>
+        <input type="radio" id="male" name="gender">
+        <label for="female">Female</label>
+        <input type="radio" id="female" name="gender">
+        <label for="other">Other</label>
+        <input type="radio" id="other" name="gender"> <br> <br>
+
+        <!-- Input type| Checkbox -->
+        Topics :
+        <label for="html">Html :</label>
+        <input type="checkbox" name="topic" id="html">
+        <label for="css">CSS :</label>
+        <input type="checkbox" name="topic" id="css">
+        <label for="javscript">Javascript :</label>
+        <input type="checkbox" name="topic" id="javascript"> <br><br>
+
+
+        <!-- Input type | select -->
+        <label for="country">Country</label>
+        <select name="country" id="country">
+            <option value="india">India</option>
+            <option value="india">USA</option>
+            <option value="india">Japan</option>
+            <option value="india">Germany</option>
+            <option value="india">Australia</option>  
+        </select><br><br>
+
+        <!-- Input type | Text area -->
+        <label for="comment">Comment :</label>
+        <br>
+        <textarea name="comment" id="comment" rows="10" cols="40">
+            Any Queries ? 
+        </textarea><br><br>
+
+        <!-- Input type | submit -->
+        <input type="submit" value="submit">
+
+
+        <!-- iframes | used to embed another webpage or multimedia content within a webpage .  -->
+        <!-- src attribute | specifies the url of the content to be embedded  -->
+        <!-- dimensions | width and height can be set using width and height attributes  -->
+        <iframe src="" frameborder="0" height="200px"></iframe>
+
+    </form>
+</body>
+</html>
