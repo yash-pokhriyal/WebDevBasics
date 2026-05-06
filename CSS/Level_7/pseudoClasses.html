@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+       .btn{
+        height: 20px;
+        width: 70px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: rgb(89, 132, 170);
+        transition-property: all;
+        transition-duration: 4s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 1s;
+       }
+       .btn:hover{
+        height: 25px;
+        width: 90px;
+        border: 1px solid red;
+       }
+       .btn:active{
+        height: 25px;
+        width: 90px;
+        border: 1px solid red;
+        background-color: blue;
+
+       }
+       .box{
+        height: 50px;
+        width: 50px;
+        padding: 5px;
+        margin: 20px;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: all ease-in-out 4s 1s;
+
+      
+       }
+       .box1{
+        background-color: rgb(192, 161, 120);
+       }
+       .box1:hover{
+        transform: rotate(45deg);
+       }
+       .box2{
+        background-color: rgb(239, 139, 9);
+       }
+       .box2:hover{
+        transform: scale(2);
+       }
+       .box3{
+        background-color: rgb(192, 161, 120);
+       }
+       .box3:hover{
+        transform: scaleX(2);
+       }
+       .box4{
+        background-color: rgb(135, 145, 195);
+
+       }
+       .box4:hover{
+        transform: translateX(-50px);
+       }
+       .box5{
+        background-color: rgb(186, 190, 212);
+       }
+       .box5:hover{
+        transform: skew(45deg);
+       
+       }
+       .box6{
+        height: 200px;
+        width: 200px;
+        background-color: brown;
+        position: absolute;
+        left: 10px;
+ 
+        /* animation */
+
+        /* animation: ghummakad 4s ease-in-out 1s 3 alternate ; */}
+
+       @keyframes ghummakad{
+        from{
+            left: 10px;
+        }to{
+            left: 700px;
+        }
+       }
+       @keyframes ghummakad2{
+        0%{
+            left: 10px;
+        }50%{
+            left: 500px;
+        }100%{
+            left: 700px;
+        }
+       }
+       
+
+       /* Progress Bar */
+       .outer{
+        height: 20px;
+        width: 200px;
+        border: 1px solid black;
+        background-color: antiquewhite;
+        border-radius: 10px;
+        position: relative;
+       }
+       .fill{
+        height: 100%;
+        background-color: blue;
+        border-radius: 10px;
+        width: 0%;
+        animation: fill 4s linear 1 2s;
+      
+       }
+       @keyframes fill{
+        from{
+           width: 0%;
+        }to{
+            width: 100%;
+        }
+       }
+    </style>
+</head>
+<body>
+    <button class="btn">Click me</button>
+
+    <!-- CSS Transform -->
+
+ 
+        <div class="box1 box">Box1</div>
+        <div class="box2 box">Box2</div>
+        <div class="box3 box">Box3</div>
+        <div class="box4 box">Box4</div>
+        <div class="box5 box">Box5</div>
+
+    <!-- Animation properties -->
+    <hr>
+    <!-- <div class="box6">
+        Box6
+    </div> -->
+    <hr>
+
+    <!-- progress bar -->
+    <div class="outer"> 
+        <div class="fill"></div>
+    </div>
+
+
+
+</body>
+</html>
+
+<!-- Pseudo classes -->
+<!-- active , hover -->
+
+<!-- Transitions -->
+
+<!-- transition property : enables smooth animation between changes in CSS property values -->
+
+<!-- transition property: define which css property will transition -->
+
+<!-- transition durtion : sets how long transition lasts -->
+
+<!-- transition timing function :control the speed curve of transition -->
+
+<!-- transition delay :specifies a delay before transition starts -->
+
+<!-- pdtd -->
+
+
+<!-- CSS transform -->
+<!-- allow modification of an elements shape and position -->
+
+<!-- rotate scale translate -->
+
+
+
+<!-- Animation property -->
+<!-- animation name : specifies the name of animation define by @keyframes -->
+<!-- animation duration : total time of animation take to complete the cycle -->
+<!-- animation timing function -->
+<!-- animation delay:set delays before animation starts -->
+<!-- animation iteration count :number of times animation should repeat -->
+<!-- animation direction: allowing for reverse or alternate cycle -->

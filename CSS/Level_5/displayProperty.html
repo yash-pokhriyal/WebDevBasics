@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display and Position</title>
+    <style>
+        *{
+            font-size: 50px;
+        }
+        #box1{
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            margin: 20px;
+
+            /* default */
+            display: block;
+
+            /* jese hi bdla inline me to height width hatt jaegi */
+            display: inline;
+
+            /* to solve this we have inline block */
+            display: inline-block;
+
+            /* poora htadeta even uski space bhi display none */
+            display: none;
+        }
+        #box2{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            margin: 20px;
+            display: inline-block;
+
+        }
+        .outerbox{
+           height: 500px;
+           width: 500px;
+           background-color: blanchedalmond;
+           font-size: 30px;
+        }
+        .innerbox{
+           height: 10%;
+           width: 10%;
+           background-color: rgb(159, 141, 114);
+           font-size: 0.5em;
+           /* relative to parent font size */
+
+           font-size: 0.5rem;
+           /* relative to root element font size */
+        }
+
+        .bigbox{
+            /* useful for defining height and width that scale with viewport */
+            height: 50vh;
+            width: 50vw;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- display property block  -->
+     <div id="box1">
+        box1
+     </div>
+     <div id="box2">
+        box2
+     </div>
+
+     <div class="outerbox">
+        Box1
+        <div class="innerbox">
+        Box2
+        </div>
+     </div>
+    <hr>
+     <div class="bigbox">
+        bigbox
+     </div>
+</body>
+</html>
+
+<!-- Relative unit -->
+<!-- rem : relative to font size of root element -->
+<!-- % : relative to parent element -->
+<!-- vh vw for view port width and height -->
+<!-- em : size relative to parent font size -->

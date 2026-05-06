@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+
+            /* Box sizing | doesnot add extra height width due to padding and border*/
+            /* default value content box */
+            box-sizing: border-box;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: blanchedalmond;
+            /* top right bottom left */
+            padding: 20px 10px 20px 15px ;
+            margin: 10px 20px 10px 10px;
+            /* for center aligment */
+            /* margin: auto; */
+        }
+        .box1{
+            background-color: blue;
+            height: 100px;
+            width: 100px;
+            /* top-bottom left-right */
+            padding: 10px 20px;
+            margin: 20px 30px;
+
+
+        }
+        button{
+            height: 40px;
+            width: 60px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Mithai bhandaar pe chalo : MBPC -->
+     <div class="box">
+     Box
+     </div>
+     <div class="box1">
+     Box1
+     </div>
+     <button>Click me</button>
+</body>
+</html>

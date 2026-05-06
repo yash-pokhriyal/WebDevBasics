@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+
+        /* float old way  */
+
+        /* .container{
+            border: 2px solid black;
+            height: 100px;
+        }
+        .box{
+            height: 100px;
+            display: inline-block;
+            width: 100px;
+        }
+        #box1{
+            background-color: red;
+            float: right;
+        }
+        #box2{
+            background-color: yellow;
+            float: left;
+        } */
+        .container{
+            border: 2px solid black;
+            height: 400px;
+            display: flex;
+
+            /* flex direction */
+            flex-direction: column;
+            flex-direction: row-reverse;
+
+            /* automatic shrink | flex wrap:nowrap*/
+            /* width: 200px; */
+
+            /* justify content */
+            justify-content: space-between;
+            justify-content: center;
+
+            /* flex wrap */
+            /* width: 200px;
+            flex-wrap: wrap; */
+            /* is se next line me aagya agar ni lgata to vhi shrink hota */
+
+            align-items: center;
+
+            align-content: space-around;
+
+
+
+        }
+        .box{
+            height: 100px;
+        
+            width: 100px;
+        }
+        #box1{
+            background-color: red;
+            order:1;
+            
+        }
+        #box2{
+            background-color: yellow;
+            order: 3;
+            
+        } 
+        #box3{
+            background-color: gray;
+            order: 2;
+        }
+        #box4{
+            background-color: rgb(218, 218, 47);
+            /* individual flex items to override container align items property aligning them differently along the cross axis */
+            align-self: start;
+            flex-shrink: 4;
+            /* jab shrink ho to ye 4 guna jyada shrink ho sbse */
+
+            flex-grow: 2;
+            /* additional space case how much flex ite, will grow */
+            
+            order: 4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">
+            Box1
+        </div>
+        <div class="box" id="box2">
+            Box2
+        </div>
+        <div class="box" id="box3">
+            Box3
+        </div>
+        <div class="box" id="box4">
+            Box4
+        </div>
+    
+    </div>
+</body>
+</html>
+
+<!-- flexbox -->
+<!-- 1 dimensional layout method for arranging items in row or column  -->
+<!-- Item flex(expand) to fill additional space or  Shrink to fit in smaller space -->
+
+<!-- Main axis | horizontal| row-->
+<!-- cross axis | vertical | column-->
+
+<!-- flexbox container properties -->
+
+<!-- Justify content -->
+<!-- align flex items along the main axis -->
+
+<!-- flex wrap to wrap -->
+
+<!-- Align items | align the flex containers item along the cross axis -->
+
+<!-- Align content | it is utilized to adjust the spacing between flex lines within a flex container -->
+
+<!-- particulary when there is extra space along the cross axis -->
+
+
+<!-- flex items properties -->
+<!-- align self -->
+<!-- flex shrink  -->
+<!-- flex grow -->
+<!-- order : to override the original order in html -->
+
+

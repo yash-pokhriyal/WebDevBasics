@@ -1,0 +1,25 @@
+/* External CSS */
+/* Basic Syntax */
+
+/* Boiler plate code for CSS */
+
+/* Universal selector */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+/* Element selector h1 : property :color and its value is white */
+h1{ 
+    /* declaration */
+
+    /* color property defines text color or foreground color in an html element */
+    color: white;
+}
+

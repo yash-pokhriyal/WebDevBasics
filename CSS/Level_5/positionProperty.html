@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Property</title>
+    <style>
+        .box{
+            background-color: red;
+            margin: 30px;
+            height: 100px;
+            width: 100px;
+        }
+        #box1{
+            position: static;
+            background-color: bisque;
+
+            /* ispe na z index na top bottom left right apply ni krega */
+            z-index: 2;
+        }
+        #box2{
+            position: relative;
+            bottom: 60px;
+            z-index: 1;
+        }
+
+        #box3{
+            background-color: gray;
+            /* position element relative to nearest positioned ancestor */
+            position: absolute;
+            top: 100px;
+            left: 20px;
+        }
+        #box4{
+            background-color: rgb(109, 109, 196);
+            position: fixed;
+            top: 0px;
+            left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box1">
+        Box1
+    </div>
+    <div class="box" id="box2">
+        Box2
+    </div>
+    <div class="box" id="box3">
+        Box3
+    </div>
+   
+    <!-- ab scroll krne pe page upar jaega but box vhi fix rhega -->
+    <div class="box" id="box4">
+        Box4
+    </div>
+
+</body>
+</html>
+
+<!-- Position Property -->
+<!-- Static (default) : follow normal documentation | top right bottom left zindex would not work -->
+<!-- Relative : Element position adjusted from its normal position   -->
+<!-- Absolute : Position element relative to the nearest positioned ancestor -->
+<!-- Fixed : elememt position relative to the view port doesnot move on scroll -->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Properties</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Playwrite+DE+SAS:wght@100..400&display=swap" rel="stylesheet">
+
+
+    <!-- font icon -->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+    <style>
+        /* text align property */
+        .box{
+            height: 100px;
+            width: 100px;
+        }
+        #box1{
+            color: aqua;
+            background-color: rgb(37, 72, 61);
+            text-align: center;
+        }
+        #box2{
+            color: blue;
+            background-color: blueviolet;
+            text-align: end;
+        }
+
+
+        /* text decoration */
+        #box3{
+            text-decoration: underline;
+            /* underline overline line through */
+            text-decoration-color: red;
+            text-decoration-style:double;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        /* text transform */
+        #box1{
+            text-transform: lowercase;
+        }
+        #box2{
+            text-transform: uppercase;
+        }
+
+        /* line height */
+        .para1{
+            line-height: 6px;
+        }
+        .para2{
+            /* 2rem 32px */
+            line-height: 2rem;
+        }
+
+        /* Font property */
+        .para2{
+            font-size: 18px;
+            font-weight: 700;
+            font-style: oblique;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .para3{
+            font-family: "Playwrite DE SAS", cursive;;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box1" class="box">Box1</div>
+    <div id="box2" class="box">Box2</div>
+    <div id="box3" class="box">Box3</div>
+    <a href="#">Home</a>
+    <p class="para1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero sequi laborum officiis quo magni qui labore maiores quibusdam molestias harum.</p>
+    <hr>
+    <p class="para2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam officiis accusamus optio in sint vel neque debitis amet aliquam voluptatem! Eligendi maxime ex nostrum blanditiis pariatur? Dicta, pariatur. Ipsum, nihil?</p>
+    <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem reiciendis dolorem amet blanditiis rem animi, repudiandae necessitatibus corrupti molestiae aliquam.</p>
+
+    <!-- font icon -->
+    <span class="material-symbols-outlined">
+search
+</span>
+</body>
+</html>
