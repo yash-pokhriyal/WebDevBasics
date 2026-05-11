@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector In Javscript</title>
+</head>
+
+<body>
+    <h1>Hello Knowledge Gate</h1>
+    <h2 class="coding">Hello Knowledge Gate</h2>
+    <h3 id="placement">Hello Knowledge Gate</h3>
+
+    
+
+    <script>
+        // To interact with or modify webpage elements : Query Selector
+        // getElementsById
+        // getElementsByClassName
+        // querySelector
+        const hElement = document.querySelector('h1');
+        const hElement2 = document.getElementsByClassName('coding');
+        const hElement3 = document.getElementById('placement');
+
+        hElement.textContent = 'Hello Students';
+        hElement.style.color = 'blue';
+
+
+
+    </script>
+</body>
+</html>

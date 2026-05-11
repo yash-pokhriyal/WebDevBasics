@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra Bag Excercise</title>
+    <style>
+        #btn1{
+            padding: 10px 20px;
+            background-color: wheat;
+            border: none;
+            border-radius: 13px;
+        }
+        .btn2{
+            padding: 10px 40px;
+            text-transform: uppercase;
+            border: 2px solid black;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1" onclick="cartQuantity++;
+    document.querySelector('#cart-summary').innerText = `Your bag have ${cartQuantity} items`">Add to Bag</button>
+
+    <button class="btn2" onclick="cartQuantity--;
+    document.querySelector('#cart-summary').innerText = `Your bag have ${cartQuantity} items .`
+    ">♥️ Wishlist</button>
+
+
+    <h1 id="cart-summary"></h1>
+
+
+    <script>   
+       let cartQuantity = 0;
+       document.querySelector('#cart-summary').innerText =`Your bag have ${cartQuantity} items`;
+    </script>
+    
+</body>
+</html>
