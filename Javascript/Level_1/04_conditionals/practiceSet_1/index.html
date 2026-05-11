@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        let gender = 'male';
+        let age = 50;
+        if(age<5 ){
+            console.log('Free ticket')
+        }else if(age<=8 || gender == 'female'){
+            console.log('You have to pay half the price');
+        }else if(age>65){
+            console.log('You have to pay only 30%');
+        }else{
+            console.log('You to pay full price');
+        }
+    </script>
+</body>
+</html>
+
+<!-- Give discount based on age, gender for metro ticket
+- Females get 50% off
+- Kids under 5 years of age are free
+- Kids up to 8 years have half ticket
+- People Over 65 years of age only pay 30% of
+the ticket
+- In case of multiple discounts max discount will
+apply. -->
+

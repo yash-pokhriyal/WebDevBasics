@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+</head>
+<body>
+    
+    <script>
+        // comparision operators 
+        console.log(7>8);
+        console.log(typeof true);
+
+        // if else
+        let age = 19;
+        if(age>18){
+            console.log('You are adult');
+        }else{
+            console.log('You are not adult');
+        }
+
+        // ternary operator
+        let money = 2000;
+        let result = money>10000 ? 'Good money':'You have to earn more';
+        console.log(result);
+
+        // guard operators
+        let inputName;
+        let userNickname = inputName || "Guest";
+        console.log(userNickname);
+
+        inputName = 'Yash Pokhriyal';
+        let userNickname1 = inputName || "Guest";
+        console.log(userNickname1);
+
+
+
+    </script>
+</body>
+</html>
