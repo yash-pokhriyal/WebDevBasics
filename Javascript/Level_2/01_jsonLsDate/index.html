@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json LocalStrogae Date</title>
+</head>
+<body>
+
+     <!-- <button class="my-btn"></button> -->
+    <div class="my-div">This is the div </div>
+
+    <script>
+
+        // json is not same as js object but similar
+        let product = {
+            name:'T-shirt',
+            price:789,
+            rating:{
+                stars:4.5,
+                reviews:287,
+            }
+        }
+        console.log(product);
+        console.log(typeof product);
+
+        let str = JSON.stringify(product);
+        console.log(str);
+
+        let obj = JSON.parse(str);
+
+        // JSON.stringify() Object ko String banata hai, aur JSON.parse() String ko wapas Object banata hai.
+
+        // Local Storage
+        // only strings can be saved
+        // getItem and setItem
+
+        // localStorage.clear();
+        // removeItem();
+        
+        localStorage.setItem('name','bindu');
+        localStorage.setItem('age','23');
+        
+        console.log(localStorage.getItem('name'))
+        console.log(localStorage.getItem('age'))
+
+        // Only string can be stores
+        localStorage.setItem('obj',JSON.stringify(product));
+
+        let product2 = JSON.parse(localStorage.getItem('obj'));
+        console.log(product2);
+
+        localStorage.removeItem('obj');
+        localStorage.clear();
+
+
+        // Date 
+        let myDate = new Date();
+        console.log(myDate);
+        console.log(myDate.getDate());
+        console.log(myDate.getFullYear());
+        console.log(myDate.getMonth());
+
+
+        // DOM
+        let button = document.createElement('Button');
+        button.innerText = 'Click Me'
+
+        document.querySelector('.my-div').appendChild(button);
+        document.querySelector('.my-div').removeChild(button);
+
+
+
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

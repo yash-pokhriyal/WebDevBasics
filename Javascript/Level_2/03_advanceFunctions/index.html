@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance functions</title>
+</head>
+<body>
+    <button id="btn">Button</button>
+    <script>
+        // anonymous function
+        let sum = function(num1,num2){
+            return num1+num2;
+        }
+        console.log(sum(7,8));
+        // arrow function
+        let sumArrow = (num1,num2)=>{
+            return num1 + num2;
+        }
+
+        // set timeout -> asynchronous function->run one time
+        let timerId = setTimeout(()=>console.log('Hare Krishna'),2000);
+        console.log(`settimeout id is ${timerId}`)
+
+        // clear timeout
+        // clearTimeout(timerId)
+
+        // set interval
+
+        let intervalId = setInterval(()=>console.log('radhey shyam'),2000)
+        // clearInterval(intervalId);
+
+        setTimeout(()=>clearInterval(intervalId),10000)
+
+
+        // event listener
+        const button = document.querySelector('#btn');
+        button.addEventListener('click',event=>{console.log('Hello')});
+
+
+        let printDate = event => console.log(new Date());
+        button.addEventListener('click',printDate);
+
+        button.removeEventListener('click',printDate)
+
+
+        // for loop ->method for array iteration,often preffered for readability
+        // Using return is similar to continue in traditional loops.
+
+        let foods = ['bread','rice','meat','pizza'];
+        foods.forEach(function(food){
+            console.log(food);
+        })
+
+        // filter
+        let arr = [1,2,3,4,5,6,7,8]
+        let odds = arr.filter((num,index)=>{
+            if(num%2!=0){
+                return true
+            }else{
+                return false;
+            }
+        })
+        console.log(odds)
+
+        // map
+        let squares = arr.map((num,index)=>{
+            return num*num;
+        })
+        console.log(squares);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

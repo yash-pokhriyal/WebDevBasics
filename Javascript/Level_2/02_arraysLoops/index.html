@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and loops</title>
+</head>
+<body>
+  
+    <script>
+         // array is a list of values 
+            let myArray = [1,'hello',null ,true,{likes:'1 Million'}]
+            console.log(myArray);
+
+            console.log(typeof myArray); //object
+            console.log(Array.isArray(myArray));
+
+            console.log(myArray[0]);
+
+            console.log(myArray.length);
+            console.log(myArray.valueOf());
+            
+            let arr1 = [3,5,7,5]
+            // start index , delete count
+            arr1.splice(1,2);
+            console.log(arr1)
+
+            let num = 1;
+            while(num<10){
+                console.log(num++);
+            }
+
+            let x = 10;
+            do{
+              console.log(x--)
+            }while(x>=0);
+
+            for(let i =0;i<=10;i++){
+                console.log(i);
+            }
+
+
+            // accumulater pattern
+              let nums = [3,6,7,9,4]
+             let sum = 0;
+            for(let i =0;i<nums.length;i++){
+              sum+=nums[i];
+
+             }
+             console.log(sum);
+
+            //  Break -> stop
+            // continue ->skip
+
+
+    </script>
+</body>
+</html>
+
+<!-- push/pop: Add or remove to end.
+• shift/unshift: Add or remove from front.
+• splice: Add or remove elements.
+• toString: Convert to string.
+• sort: Sort elements.
+• valueOf: Get array itself.
+4. Arrays also use reference lik -->
