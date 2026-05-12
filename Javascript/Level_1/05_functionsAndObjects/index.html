@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions And Object</title>
+</head>
+<body>
+    <script>
+        // Functions are block of reusable code 
+        function sum(a,b){
+            return a+b;
+        }
+        let res = sum(7,8);
+        console.log(res);
+
+        // here a and b are parameters 
+        // 7 and 8 are arguments
+
+        // Basics of objects
+        let product = {
+            company: 'Mango',
+            price:861,
+            'item-name':'T-shirt',
+            rating:{
+                stars:4.5,
+                noOfReviews:87
+            },
+            displayPrice:function(){
+                return this.price
+            },
+        }
+
+        console.log(product)
+        console.log(product['company']);
+        console.log(product['price']);
+        console.log(product['rating']['stars']);
+        console.log(product.displayPrice());
+
+
+        // Updation 
+        product.company = 'apple';
+        console.log(product);
+
+        // deletion 
+        delete product.company;
+        console.log(product)
+
+        // autoboxing : automatic conversion of primitives to object
+
+        // allows methods and properties to be used in primitives
+
+        console.log('Hello we are group of coders'.length);
+        console.log('Hello we are group of coders'.toUpperCase());
+        console.log('Hello we are group of coders'.replace('group','team'))
+
+        // Pass by value and pass by reference 
+
+        // Pass by value
+        let a = 5;
+        let b= a;
+
+        console.log(a,b);
+        a = 7;
+        console.log(a,b)
+
+        // pass by reference
+        let x = {num:5}
+        let y =x;
+
+        console.log(x.num,y.num);
+        x.num = 8;
+
+        console.log(x.num,y.num);
+
+        // yhan reference pass hua tabhi ek ko badlte hi dusra badal jata
+
+        console.log(typeof x);
+        // object
+        
+        let p = {num:7};
+        let q ={num:7};
+        console.log(p==q) //false
+
+        // Object shortcut 
+         product = {
+         company:'Mango',
+         price:861,
+         'item_name': 'T-shirt',
+         rating:{
+            stars:4.5,
+            noOfReviews:87
+         },
+         displayPrice(){
+            return `${this.price}`
+         }
+        };
+
+        // destructuring 
+
+        let {company , price} = product;
+        console.log(company,price)
+
+
+
+        
+    </script>
+</body>
+</html>

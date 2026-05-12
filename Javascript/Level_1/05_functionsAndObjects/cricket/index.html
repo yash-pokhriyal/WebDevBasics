@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bat Ball And Wicket Game</title>
+</head>
+<body>
+   <h1>Bat Ball Stump Game</h1>
+
+   <!-- Bat Button -->
+   <button onclick="playGame('Bat')"><b>BAT</b></button>
+   <!-- Ball button -->
+   <button onclick="playGame('Ball')"><b>BALL</b></button>
+   <!-- Wicket Button -->
+   <button onclick="playGame('Wicket')"><b>Wicket</b></button>
+
+    <script>
+
+        // Object for maintaing scores;
+        let score = {
+            win:0,
+            loss:0,
+            tie:0,
+            displayScore:function(){
+                return `No. of matches Won: ${this.win} ,Loss: ${this.loss},tie :${this.tie}`;
+            }
+        }
+
+
+        // Function to generate computer choice
+        function generateComputerChoice(){
+            let randomNumber = Math.floor(Math.random()*3)
+            if(randomNumber == 0){
+                return 'Bat';
+            }else if(randomNumber == 1){
+                return 'Ball'
+            }else{
+                return 'Wicket';
+            }
+
+        }
+ 
+        
+        // Get result 
+        function getResult(userMove,computerMove){
+            if(userMove === 'Bat'){
+
+                if(computerMove === 'Bat'){
+                    score.tie++;
+                    return 'Its a tie ';
+                }else if(computerMove === 'Ball'){
+                    score.win++;
+                    return 'You won baby ! Lets celebrate ';
+                }else{
+                    score.loss++;
+                    return 'You lose bruh . Better luck next time .';
+                }
+
+            }else if(userMove === 'Ball'){
+
+                if(computerMove === 'Bat'){
+                    score.loss++;
+                    return 'You lose bruh . Better luck next time .';
+                }else if(computerMove === 'Ball'){
+                    score.tie++;
+                    return'Its a tie .';
+                }else{
+                    score.win++;
+                    return 'You won baby ! Lets celebrate ';
+                }
+
+
+            }else{
+
+                if(computerMove === 'Bat'){
+                    score.win++;
+                    return 'You won baby ! Lets celebrate ';
+                }else if(computerMove === 'Ball'){
+                    score.loss++;
+                    return 'You lose bruh . Better luck next time .';
+                }else{
+                    score.tie++;
+                    return 'Its a tie .';
+                }
+
+
+            }
+        }
+
+
+        // Show result
+        function showResult(userMove ,computerMove ,result){
+            alert(`You have chosen ${userMove} and computer choose ${computerMove} .${result} ${score.displayScore()}`);    
+        }
+
+
+        // Play game
+        function playGame(userMove){
+
+           let computerChoice =generateComputerChoice();
+           let resultMsg =getResult(userMove,computerChoice);
+           showResult(userMove,computerChoice,resultMsg);
+   
+        }
+
+    </script>
+
+
+</body>
+</html>

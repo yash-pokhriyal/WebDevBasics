@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set</title>
+</head>
+<body>
+    <script>
+       let product = {
+            name:'Jeans',
+            size:'s',
+            fit:'Slim fit',
+            'delivery-time':'Same day delivery'
+       }
+       let number1 = {num:1};
+       let number2 = number1;
+       console.log(number1)
+       console.log(number2)
+       number1.den = 2;
+       console.log(number1)
+       console.log(number2)
+
+       let obj = {message: 'good job', status: 'complete'};
+       let {message,status} = obj;
+       console.log(message,status);
+
+       function isIdentical(obj1,obj2){
+
+            if(typeof obj1!=='object' ||typeof obj2!=='object' ){
+                console.warn('Parameter passed is not object');
+                return false;
+            }
+
+            if(obj1==obj2){
+                return true;
+            }
+
+            if (obj1.name === obj2.name &&
+            obj1.size === obj2.size &&
+            obj1.fit === obj2.fit) {
+            return true;
+            } else {
+            return false;
+        }
+        }
+
+
+        let product2 = {
+        name: 'Jeans',
+        size: 'M',
+        fit: 'Slim Fit',
+        'delivery-time': 'Same day delivery',
+        };
+
+        let product3 = {
+        name: 'Jeans',
+        size: 'M',
+        fit: 'Slim Fit',
+        'delivery-time': 'Same day delivery',
+        };
+
+        console.log(isIdentical(product, ''));
+        console.log(isIdentical(product, product));
+        console.log(isIdentical(product, product2));
+        console.log(isIdentical(product3, product2));
+        console.log(isIdentical(product2, product3));
+
+
+       
+
+    </script>
+</body>
+</html>
+
+<!-- 1. Create object to represent a product from Myntr
+2.Create an Object with two references and log changes to
+one object by changing the other one.
+3. Use bracket notation to display delivery-time.
+4.Given an object {message: 'good job', status: 'complete'},
+use de-structuring to create two variables message and
+status.
+5. Add function isIdenticalProduct to compare two product objects
+-->
+
