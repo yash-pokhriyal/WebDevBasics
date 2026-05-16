@@ -1,0 +1,13 @@
+body{
+  background-color: black;
+  color: white;
+}
+
+.container{
+  background-color: rgb(6,59,151);
+  border: 2px solid yellow;
+  padding: 10px;
+  margin : 10px;
+}
+
+/* It is a global file */
